@@ -28,8 +28,7 @@ def hello_semester():
     >>> hello_semester()
     Welcome to "Symbolische Programmierung" WS 19/20
     """
-    pass
-
+    print('Welcome to "Symbolische Programmierung" WS 19/20')
 
 def modulo(x, y):
     """ Return the value x modulo y (i.e., do NOT print it).
@@ -40,8 +39,7 @@ def modulo(x, y):
     >>> modulo(70, 7)
     0
     """
-    pass
-
+    return x % y;
 def odd_number(x):
     """ Return True or False whether x is odd or not.
     >>> odd_number(15)
@@ -51,8 +49,8 @@ def odd_number(x):
     >>> odd_number(-3)
     True
     """
-    pass
-
+    if (x % 2 != 0 ) : print (True)
+    else : print(False)
 # ===STRING OPERATIONS====================================================
 
 def happy_birthday(name, age):
@@ -61,6 +59,7 @@ def happy_birthday(name, age):
     Happy 17th birthday, Peter!
     """
     pass
+
 
 def word_multiplier(word, n):
     """ Return a word multiplied n times.
