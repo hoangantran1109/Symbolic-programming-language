@@ -28,8 +28,7 @@ def hello_semester():
     >>> hello_semester()
     Welcome to "Symbolische Programmierung" WS 19/20
     """
-    pass
-
+    print('Welcome to "Symbolische Programmierung" WS 19/20')
 
 def modulo(x, y):
     """ Return the value x modulo y (i.e., do NOT print it).
@@ -40,7 +39,7 @@ def modulo(x, y):
     >>> modulo(70, 7)
     0
     """
-    pass
+    x % y
 
 def odd_number(x):
     """ Return True or False whether x is odd or not.
@@ -51,8 +50,10 @@ def odd_number(x):
     >>> odd_number(-3)
     True
     """
-    pass
-
+    if x % 2 != 0:
+        return True
+    else:
+        return False
 # ===STRING OPERATIONS====================================================
 
 def happy_birthday(name, age):
@@ -60,7 +61,7 @@ def happy_birthday(name, age):
     >>> happy_birthday("Peter","17")
     Happy 17th birthday, Peter!
     """
-    pass
+    print('Happy ' + age + 'th birthday, ' + name + ' !')
 
 def word_multiplier(word, n):
     """ Return a word multiplied n times.
@@ -72,7 +73,8 @@ def word_multiplier(word, n):
     >>> word_multiplier('Fish', 0)
     ''
     """
-    pass
+    print(word * n)
+
 
 def reverse(word):
     """ Return the reverse of a word.
@@ -85,7 +87,14 @@ def reverse(word):
     >>> reverse("12345")
     '54321'
     """
-    pass
+    #sol1:
+    word[::-1]
+
+    #sol2:
+    reversed_word = '' #'result' instead of 'reversed_word'?
+    for i in reversed(word):
+        reversed_word += i
+    print(reversed_word)
 
 def every_nth(word, n):
     """ Return every nth letter of w word
@@ -97,6 +106,7 @@ def every_nth(word, n):
     'Aetd'
     """
     pass
+
 
 # ===LIST OPERATIONS====================================================
 listOne = ["Germany", "Spain", "Italy", "Poland", "France"]
