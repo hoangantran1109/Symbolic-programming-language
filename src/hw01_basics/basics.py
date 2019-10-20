@@ -39,7 +39,9 @@ def modulo(x, y):
     >>> modulo(70, 7)
     0
     """
+
     return x % y;
+
 def odd_number(x):
     """ Return True or False whether x is odd or not.
     >>> odd_number(15)
@@ -49,8 +51,10 @@ def odd_number(x):
     >>> odd_number(-3)
     True
     """
+
     if (x % 2 != 0 ) : print (True)
     else : print(False)
+
 # ===STRING OPERATIONS====================================================
 
 def happy_birthday(name, age):
@@ -58,7 +62,7 @@ def happy_birthday(name, age):
     >>> happy_birthday("Peter","17")
     Happy 17th birthday, Peter!
     """
-    pass
+    print("Happy " +age+"th birthday, " +name+"!")
 
 
 def word_multiplier(word, n):
@@ -71,7 +75,8 @@ def word_multiplier(word, n):
     >>> word_multiplier('Fish', 0)
     ''
     """
-    pass
+    if (n > 0):print("'" + word * n + "'")
+    else:return ''
 
 def reverse(word):
     """ Return the reverse of a word.
@@ -84,7 +89,11 @@ def reverse(word):
     >>> reverse("12345")
     '54321'
     """
-    pass
+    #sol2:
+    reversed_word = '' #'result' instead of 'reversed_word'?
+    for i in reversed(word):
+        reversed_word += i
+    print("'" + reversed_word + "'")
 
 def every_nth(word, n):
     """ Return every nth letter of w word
@@ -95,7 +104,8 @@ def every_nth(word, n):
     >>> every_nth("Apfelstrudel",3)
     'Aetd'
     """
-    pass
+    return word[::n]
+
 
 # ===LIST OPERATIONS====================================================
 listOne = ["Germany", "Spain", "Italy", "Poland", "France"]
@@ -110,7 +120,7 @@ def second_element(list_a):
     >>> second_element(listTwo)
     2
     """
-    pass
+    return(list_a[1])
 
 def concatenate_lists(list_a, list_b):
     """ Return the concatenation of both lists.
@@ -119,7 +129,7 @@ def concatenate_lists(list_a, list_b):
     >>> concatenate_lists([42,3],["Super","Duper"])
     [42, 3, 'Super', 'Duper']
     """
-    pass
+    return(list_a + list_b)
 
 def swap_half(list_a):
     """ Swaps the first half of a list with the second half of the list.
@@ -129,7 +139,8 @@ def swap_half(list_a):
     >>> swap_half(listOne)
     ['Italy', 'Poland', 'France', 'Germany', 'Spain']
     """
-    pass
+    if(len(list_a) %2 == 0 ) : print(list_a[::-1])
+    else:print(list_a[(len(list_a)//2):len(list_a)] + list_a[0:(len(list_a)//2)])
 
 def replace_elements(list_a, replacement_indices, new_value):
     """ Replace the elements in list_a at the positions given in replacement_indices with new_value, and return the
