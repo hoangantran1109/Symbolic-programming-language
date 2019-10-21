@@ -89,8 +89,9 @@ def reverse(word):
     >>> reverse("12345")
     '54321'
     """
+    #sol1: word[::-1]
     #sol2:
-    reversed_word = '' #'result' instead of 'reversed_word'?
+    reversed_word = '' #'result' instead of 'reversed_word'? ja,man kann auch das machen
     for i in reversed(word):
         reversed_word += i
     print("'" + reversed_word + "'")
@@ -139,7 +140,7 @@ def swap_half(list_a):
     >>> swap_half(listOne)
     ['Italy', 'Poland', 'France', 'Germany', 'Spain']
     """
-    if(len(list_a) %2 == 0 ) : print(list_a[::-1])
+    if(len(list_a)%2== 0): print(list_a[::-1])
     else:print(list_a[(len(list_a)//2):len(list_a)] + list_a[0:(len(list_a)//2)])
 
 def replace_elements(list_a, replacement_indices, new_value):
@@ -150,7 +151,7 @@ def replace_elements(list_a, replacement_indices, new_value):
     >>> replace_elements(listOne.copy(),[1,2,3],"North pole")
     ['Germany', 'North pole', 'North pole', 'North pole', 'France']
     """
-    pass
+    return [new_value if i in replacement_indices else x for i, x in enumerate(list_a)]
 
 
 def long_strings(string_list, max_length):
@@ -163,7 +164,15 @@ def long_strings(string_list, max_length):
     [False, True, False, True]
     """
     pass
+    """
+    for i in range(len(string_list)):
+            if (len(string_list[i]) > max_length):
+                string_list[i] = True
+            else:
+                string_list[i] = False
 
+            print(string_list)
+     """
 # ===LOOP OPERATIONS====================================================
 
 def print_squares(list_a):
@@ -174,7 +183,8 @@ def print_squares(list_a):
     64
     36
     """
-    pass
+    for i in list_a:
+        print (i*i)
 
 
 def count_to_k(k):
@@ -190,7 +200,10 @@ def count_to_k(k):
     -2
     >>> count_to_k(0)
     """
-    pass
+    for i in range(0,k) :
+        print(i)
+    for i in reversed(range(k, 0)):
+        print(i)
 
 
 # ===REGULAR EXPRESSIONS====================================================
