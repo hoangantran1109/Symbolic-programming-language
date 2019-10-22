@@ -21,6 +21,7 @@ Happy coding!
 
 
 # ===BASICS AND NUMBERS====================================================
+from copy import deepcopy
 
 
 def hello_semester():
@@ -163,16 +164,16 @@ def long_strings(string_list, max_length):
     >>> long_strings(["a", "bb", "", "ccc"], 1)
     [False, True, False, True]
     """
-    pass
-    """
-    for i in range(len(string_list)):
-            if (len(string_list[i]) > max_length):
-                string_list[i] = True
-            else:
-                string_list[i] = False
 
-            print(string_list)
-     """
+    list1 = []
+    for i in range(len(string_list)):
+        if (len(string_list[i]) > max_length):
+            list1.append(True)
+        else:
+            list1.append(False)
+
+    print(list1)
+
 # ===LOOP OPERATIONS====================================================
 
 def print_squares(list_a):
