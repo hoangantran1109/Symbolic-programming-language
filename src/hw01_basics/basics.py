@@ -221,11 +221,12 @@ def no_numbers(w):
     >>> no_numbers("A B C D E F G H I J K L")
     True
     """
-    for char in w:
-        if char.lower() in '012345678958' :
-            return print(False)
-        return print(True)
 
+
+    if any(char.isdigit() for char in w) :
+        print(False)
+    else :
+        print(True)
 
 def contains_substring(substring, string):
     """ Return True or False whether w contains a certain substring.
@@ -242,10 +243,9 @@ def contains_substring(substring, string):
     >>> contains_substring("Salat","S a l a t")
     False
     """
-    for char in substring :
-        if char.lower() in string.lower():
-            return True
-        return False
-
+    if (substring.lower() in string.lower()):
+        print(True)
+    else:
+        print(False)
 
 # =======================================================
