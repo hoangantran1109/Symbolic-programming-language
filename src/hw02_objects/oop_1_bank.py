@@ -22,6 +22,7 @@ d) Write a function apply_interest(self) which applies an interest
 
 e) Draw a UML diagram representing your Account class. (1 point)
 """
+import re
 
 
 class Account:
@@ -29,36 +30,49 @@ class Account:
     which data objects this class is designed for.
     You have to remove the pass statement and then write some
     code for the class. """
-
+    num_of_accounts = 0
     # CONSTRUCTOR DER KLASSE ACCOUNT
     def __init__(self, num, person):
         self.balance = 0
         self.number = num
         self.holder = person
-    # METHODS
+        Account.num_of_accounts += 1
+        # METHODS
 
-    """ * dies Method beschreibt die Auszahlung von Account.
-    """
+        """ * dies Method beschreibt die Auszahlung von Account.
+        """
+
     def withdraw(self, amount):
-        if((self.balance - amount ) <= 1000):
+        if ((amount - self.balance) <= 1000):
             self.balance -= amount
         else:
             print("Die Auszahlung ist nicht moeglich!")
-
+            print("Du hast nur:", self.balance)
 
     """ * dies Method beschreibt die Einzahlung von Account.
     """
+
     def deposit(self, amount):
         self.balance += amount
+
     """ * dies Set-Method beschreibt die Aenderung von Holder des Accountes. 
     """
-    def setHolder(self,value):
-        self.holder = value;
+
+    def setHolder(self, person):
+        if (not type(person) == str):
+            raise TypeError
+        if not re.match("\W+( \W+)*", person.strip()):
+            self.holder = person;
+
+    """ dies Method beschreibt die Zinsen von Account
+    """
+
     def apply_interest(self):
-        self.balance = self.belance + self.balance*(0, 0o15)
+        self.balance = self.balance + self.balance * (0.015)
 
     """ * dies Method beschreibt die Informationen von Account.
     """
+
     def __str__(self):
 
         res = "*** Account Info ***\n"
@@ -67,7 +81,29 @@ class Account:
         res += "Balance: " + str(self.balance) + "\n"
         return res
 
+        """ * dies Method beschreibt die aktuelle Anzahl von Account
+        """
+
+
+    def accounts_info(self):
+        print(Account.num_of_accounts, "accounts have been created.")
 
 
 if __name__ == "__main__":
     print("Welcome to the Python Bank!")
+    annesAcc = Account(1, "Anne")
+    annesAcc.balance = 200
+    annesAcc.accounts_info()
+    annesAcc.deposit(200)
+    print(annesAcc)
+    annesAcc.apply_interest()
+    print(annesAcc)
+    stefansAcc = Account(2, "Stefan")
+    stefansAcc.balance = 0
+    stefansAcc.accounts_info()
+    stefansAcc.deposit(500)
+    print(stefansAcc)
+    stefansAcc.withdraw(1500)
+    print(stefansAcc)
+    stefansAcc.setHolder("Andreas")
+    print(stefansAcc)
