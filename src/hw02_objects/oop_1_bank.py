@@ -48,6 +48,7 @@ class Account:
         else:
             print("Die Auszahlung ist nicht moeglich!")
             print("Du hast nur:", self.balance)
+            print("Du kannst maximal ", (self.balance + 1000), " auszahlen")
 
     """ * dies Method beschreibt die Einzahlung von Account.
     """
@@ -83,8 +84,6 @@ class Account:
 
         """ * dies Method beschreibt die aktuelle Anzahl von Account
         """
-
-
     def accounts_info(self):
         print(Account.num_of_accounts, "accounts have been created.")
 
@@ -103,7 +102,7 @@ if __name__ == "__main__":
     stefansAcc.accounts_info()
     stefansAcc.deposit(500)
     print(stefansAcc)
-    stefansAcc.withdraw(1500)
+    stefansAcc.withdraw(1800)
     print(stefansAcc)
     stefansAcc.setHolder("Andreas")
     print(stefansAcc)
