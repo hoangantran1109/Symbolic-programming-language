@@ -63,7 +63,8 @@ class Account:
         if (not type(person) == str):
             raise TypeError
         if not re.match("\W+( \W+)*", person.strip()):
-            self.holder = person;
+            raise ValueError
+        self.holder = person;
 
     """ dies Method beschreibt die Zinsen von Account
     """
