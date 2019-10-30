@@ -29,7 +29,45 @@ class Account:
     which data objects this class is designed for.
     You have to remove the pass statement and then write some
     code for the class. """
-    pass
+
+    # CONSTRUCTOR DER KLASSE ACCOUNT
+    def __init__(self, num, person):
+        self.balance = 0
+        self.number = num
+        self.holder = person
+    # METHODS
+
+    """ * dies Method beschreibt die Auszahlung von Account.
+    """
+    def withdraw(self, amount):
+        if((self.balance - amount ) <= 1000):
+            self.balance -= amount
+        else:
+            print("Die Auszahlung ist nicht moeglich!")
+
+
+    """ * dies Method beschreibt die Einzahlung von Account.
+    """
+    def deposit(self, amount):
+        self.balance += amount
+    """ * dies Set-Method beschreibt die Aenderung von Holder des Accountes. 
+    """
+    def setHolder(self,value):
+        self.holder = value;
+    def apply_interest(self):
+        self.balance = self.belance + self.balance*(0, 0o15)
+
+    """ * dies Method beschreibt die Informationen von Account.
+    """
+    def __str__(self):
+
+        res = "*** Account Info ***\n"
+        res += "Account ID:" + str(self.number) + "\n"
+        res += "Holder:" + self.holder + "\n"
+        res += "Balance: " + str(self.balance) + "\n"
+        return res
+
+
 
 if __name__ == "__main__":
     print("Welcome to the Python Bank!")
