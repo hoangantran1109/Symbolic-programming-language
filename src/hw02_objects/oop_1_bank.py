@@ -106,5 +106,5 @@ if __name__ == "__main__":
     print(stefansAcc)
     stefansAcc.withdraw(1800)
     print(stefansAcc)
-    stefansAcc.setHolder('Andrea')
+    stefansAcc.setHolder('Andreas')
     print(stefansAcc)
