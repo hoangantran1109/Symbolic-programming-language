@@ -31,6 +31,7 @@ class Account:
     You have to remove the pass statement and then write some
     code for the class. """
     num_of_accounts = 0
+
     # CONSTRUCTOR DER KLASSE ACCOUNT
     def __init__(self, num, person):
         self.balance = 0
@@ -60,11 +61,11 @@ class Account:
     """
 
     def setHolder(self, person):
-        if (not type(person) == str):
-            raise TypeError
-        if not re.match("\W+( \W+)*", person.strip()):
-            raise ValueError
-        self.holder = person;
+        if not type(person) == str:
+         raise TypeError
+        if not re.match("\w+( \w+)*", person.strip()):
+         raise ValueError
+        self.holder = person
 
     """ dies Method beschreibt die Zinsen von Account
     """
@@ -76,7 +77,6 @@ class Account:
     """
 
     def __str__(self):
-
         res = "*** Account Info ***\n"
         res += "Account ID:" + str(self.number) + "\n"
         res += "Holder:" + self.holder + "\n"
@@ -85,6 +85,7 @@ class Account:
 
         """ * dies Method beschreibt die aktuelle Anzahl von Account
         """
+
     def accounts_info(self):
         print(Account.num_of_accounts, "accounts have been created.")
 
@@ -105,5 +106,5 @@ if __name__ == "__main__":
     print(stefansAcc)
     stefansAcc.withdraw(1800)
     print(stefansAcc)
-    stefansAcc.setHolder("Andreas")
+    stefansAcc.setHolder('Andrea')
     print(stefansAcc)

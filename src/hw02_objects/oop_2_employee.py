@@ -25,7 +25,7 @@ class Employee:
     def set_name(self, name):
         if (not type(name) == str):
             raise TypeError
-        if not re.match("\W + ( \W+)*", name.strip()):
+        if not re.match("\w+( \w+)*", name.strip()):
             raise ValueError
         self.name = name
 
@@ -40,9 +40,9 @@ class Employee:
     """
     def set_department(self, department):
         if (not type(department) == str):
-            raise TypeError
-        if not re.match("\W + ( \W+)*", department.strip()):
-            raise ValueError
+         raise TypeError
+        if not re.match("\w+( \w+)*", department.strip()):
+         raise ValueError
         self.department = department
 
     def __str__(self):
