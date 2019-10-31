@@ -58,7 +58,7 @@ if __name__ == "__main__":
     emp2 = Employee(39118, 'IT','Nguyen Thao Anh Phan')
     print(emp2)
     emp1.set_id(47899)
-    emp1.set_department('Accounting')
+    emp1.set_department('IT')
     emp1.set_name('Hoang An Tran')
     print(emp1)
 
