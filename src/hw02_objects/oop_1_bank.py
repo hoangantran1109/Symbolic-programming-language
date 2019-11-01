@@ -63,7 +63,7 @@ class Account:
     def setHolder(self, person):
         if not type(person) == str:
          raise TypeError
-        if not re.match("\w+( \w+)*", person.strip()):
+        if not re.match(r"\w+( \w+)*", person.strip()):
          raise ValueError
         self.holder = person
 
