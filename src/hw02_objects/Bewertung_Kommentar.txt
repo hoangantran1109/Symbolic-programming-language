@@ -1,0 +1,13 @@
+Doctrings stehen innerhalb der Funktion:
+
+def withdraw(self, amount):
+    """* dies Method beschreibt die Auszahlung von Account."""
+    if ((amount - self.balance) <= 1000):
+        self.balance -= amount
+    else:
+        print("Die Auszahlung ist nicht moeglich!")
+        print("Du hast nur:", self.balance)
+        print("Du kannst maximal ", (self.balance + 1000), " auszahlen")
+
+Bei den UML Diagrammen hätte der rechte Teil gereicht.
+Der Klassenname wird mit einem Strich von den Attributen getrennt, wie in den Vorlesungsfolien.
