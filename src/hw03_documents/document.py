@@ -5,8 +5,8 @@ nltk.download('punkt')
 def normalized_tokens(text):
     """ This takes a string and returns lower-case tokens, using nltk for tokenization. """
     # TODO: return list with lower-case tokens.*DONE
-    token = (nltk.word_tokenize(text))
-    return ([t.lower() for t in token ])
+    token = nltk.word_tokenize(text)
+    return [t.lower() for t in token]
 
 class TextDocument:
 
@@ -39,6 +39,8 @@ class TextDocument:
         Every word should be considered only once, irrespective of how often it occurs in either document (i.e. we
         consider word *types*).
         """
-        pass
+        a = set(normalized_tokens(self.text))
+        b = set(normalized_tokens(other_doc))
+        return len(list(a&b))
 """python -m unittest hw03_documents\test_documents.py
 """
