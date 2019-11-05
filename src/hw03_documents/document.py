@@ -39,8 +39,10 @@ class TextDocument:
         Every word should be considered only once, irrespective of how often it occurs in either document (i.e. we
         consider word *types*).
         """
-        a = set(normalized_tokens(self.text))
-        b = set(normalized_tokens(other_doc))
-        return len(list(a&b))
+        a = set(self.word_to_count.keys())
+        c = set(other_doc.word_to_count.keys())
+        return len(a&c)
+
+
 """python -m unittest hw03_documents\test_documents.py
 """
