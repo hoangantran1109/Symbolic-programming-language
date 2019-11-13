@@ -1,0 +1,40 @@
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\Johannes\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.016s
+
+OK
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\Johannes\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.016s
+
+OK
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\Johannes\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.031s
+
+OK
+Dr. Strangelove is the U.S. President's advisor.Die EU einigt sich auf einen Kompromiss zur Zukunft des Emissionshandels.Kurzfristig ändert sich für die Länder wenig. Langfristig gibt es Hoffnung.[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\Johannes\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.016s
+
+OK
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\Johannes\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.016s
+
+OK
