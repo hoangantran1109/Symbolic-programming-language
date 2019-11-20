@@ -1,7 +1,7 @@
 import nltk
 from nltk import FreqDist, word_tokenize
 from collections import defaultdict
-import os, math
+import os, math,sys
 
 nltk.download('punkt')
 
@@ -65,7 +65,7 @@ class TextDocument:
             text = myfile.read().strip()
         return cls(text, filename)
 
-# TODO: Docstring documentation for all member functions (including constructors) Ex.3.2
+# TODO: Docstring documentation for all member functions (including constructors) Ex.3.2 DONE
 """ 
     This is a class for Collection,Compute,Reweight for Textdocuments. 
       
@@ -131,9 +131,10 @@ class DocumentCollection:
 
 
 
-# TODO: Docstring documentation for all member functions (including constructors) Ex.3.2
+# TODO: Docstring documentation for all member functions (including constructors) Ex.3.2 DONE
 """
-    This is a class for Ranked,Result for Dokument . 
+    This is a class for Ranked,Result for Dokument.
+    Putting it all together 
       
     Attributes: 
         doc_collection
@@ -144,7 +145,7 @@ class SearchEngine:
         self.doc_collection = doc_collection
 
     def ranked_documents(self, query):
-        """Ranked good,bad Document
+        """Sort the results to put most similar results first
         """
         query_doc = TextDocument(query)
         query_tokens = query_doc.token_counts.keys()
@@ -153,7 +154,7 @@ class SearchEngine:
         return sorted(docs_sims, key=lambda x: -x[1])
 
     def snippets(self, query, document, window=50):
-        """Show result of SearchEngine
+        """Select some text snippets for displaying to the user
         """
         tokens = normalized_tokens(query)
         text = document.text
@@ -165,6 +166,7 @@ class SearchEngine:
             left = "..." + text[start - window:start]
             middle = "[" + text[start: end] + "]"
             right = text[end:end + window] + "..."
-            yield left + middle + right
+        yield left+"\r" + middle +"\r"+ right
+            #print(left + middle + right, end=" ")
 
 #python -m doctest -v hw04_text_search/text_vectors.py
