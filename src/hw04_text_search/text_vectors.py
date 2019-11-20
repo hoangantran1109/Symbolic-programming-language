@@ -1,7 +1,9 @@
+import nltk
 from nltk import FreqDist, word_tokenize
 from collections import defaultdict
 import os, math
 
+nltk.download('punkt')
 
 def dot(dictA, dictB):
     """TODO: doctest for dot() go here. Ex.3.1 DONE
@@ -37,7 +39,7 @@ def normalized_tokens(text):
     This is a class for initialize string and dictionary for textdocuments. 
       
     Attributes: 
-        text (string): a strinf of TextDocument. 
+        text (string): a string of TextDocument. 
         id: an identifier of TextDocument. 
  
 """
@@ -64,6 +66,14 @@ class TextDocument:
         return cls(text, filename)
 
 # TODO: Docstring documentation for all member functions (including constructors) Ex.3.2
+""" 
+    This is a class for Collection,Compute,Reweight for Textdocuments. 
+      
+    Attributes: 
+        term_to_df(int)
+        term_to_docids(string)
+        docid_to_doc(TextDocument)
+"""
 class DocumentCollection:
     def __init__(self, term_to_df, term_to_docids, docid_to_doc):
         # string to int
@@ -96,8 +106,10 @@ class DocumentCollection:
         return cls(term_to_df, term_to_docids, docid_to_doc)
 
     def docs_with_all_tokens(self, tokens):
+        """Return document with all tokens
+        """
         docids_for_each_token = [self.term_to_docids[token] for token in tokens]
-        docids = set.intersection(*docids_for_each_token)  # union?
+        docids = set.union(*docids_for_each_token)  # union?
         return [self.docid_to_doc[id] for id in docids]
 
     def tfidf(self, counts):
@@ -120,11 +132,20 @@ class DocumentCollection:
 
 
 # TODO: Docstring documentation for all member functions (including constructors) Ex.3.2
+"""
+    This is a class for Ranked,Result for Dokument . 
+      
+    Attributes: 
+        doc_collection
+"""
 class SearchEngine:
     def __init__(self, doc_collection):
+        #Some collect from document
         self.doc_collection = doc_collection
 
     def ranked_documents(self, query):
+        """Ranked good,bad Document
+        """
         query_doc = TextDocument(query)
         query_tokens = query_doc.token_counts.keys()
         docs = self.doc_collection.docs_with_all_tokens(query_tokens)
@@ -132,6 +153,8 @@ class SearchEngine:
         return sorted(docs_sims, key=lambda x: -x[1])
 
     def snippets(self, query, document, window=50):
+        """Show result of SearchEngine
+        """
         tokens = normalized_tokens(query)
         text = document.text
         for token in tokens:
