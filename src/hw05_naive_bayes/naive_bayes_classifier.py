@@ -1,8 +1,9 @@
-from collections import defaultdict
-from nltk import word_tokenize
-import sys
 import math
+from collections import defaultdict
 
+from nltk import word_tokenize
+
+#python -m unittest -v hw05_naive_bayes/test_naive_bayes.py
 def normalized_tokens(text):
     return [token.lower() for token in word_tokenize(text)]
 
@@ -16,9 +17,12 @@ class DataInstance:
     def from_list_of_feature_occurrences(cls, feature_list, label):
         """ Creates feature counts for all features in the list."""
         feature_counts = dict()
-        # TODO: Exercise 1: Create a dictionary that contains for each feature in the list the count how often it occurs.
+        # TODO: Exercise 1: Create a dictionary that contains for each feature in the list the count how often it occurs.DONE
         # (Use your solution from the previous exercise sheet)
         # ODOT
+        for feature in feature_list:
+            count = feature_counts.get(feature, 0)
+            feature_counts[feature] = count + 1
         return cls(feature_counts, label)
 
     @classmethod
@@ -48,7 +52,7 @@ class NaiveBayesClassifier:
             self.cat_to_num_words[cat] += count
         self.vocabsize = vocabsize
         total_instances = sum(category_to_num_instances.values())
-        self.category_to_prior = {c: n/total_instances for c, n in category_to_num_instances.items()}
+        self.category_to_prior = {c: (n/total_instances) for c, n in category_to_num_instances.items()}
         self.smoothing = smoothing
 
     @classmethod
@@ -60,8 +64,10 @@ class NaiveBayesClassifier:
         category_to_num_instances = defaultdict(int) # maps a category name to the number of instances in that category
         vocabsize = len(dataset.feature_set)
         for inst in dataset.instance_list:
-            # TODO: Exercise 2.
-            pass
+            # TODO: Exercise 2.DONE
+            for feature,count in inst.feature_counts.items():
+                word_and_category_to_count[(feature,inst.label)] += count
+            category_to_num_instances[inst.label]+=1
             # ODOT
         return cls(word_and_category_to_count, category_to_num_instances, vocabsize, smoothing)
 
@@ -94,13 +100,25 @@ class NaiveBayesClassifier:
         """ Predicts a category according of the log-odds of the feature counts of this label.
         feature_counts is a dict (str -> int)."""
         best_category = None
-        # TODO: Exercise 3.
-        # ODOT
+        # TODO: Exercise 3.DONE
+        cat_score={}
+        for cat in self.cat_to_num_words:
+            cat_score[cat]=self.score_for_category(feature_counts,cat)
+        best_category= sorted(cat_score,key=cat_score.get,reverse=True)[0]
+
         return best_category
 
     def prediction_accuracy(self, dataset):
         """ Returns the accuracy of this classifier on a test set."""
-        # TODO: Exercise 4.
+        # TODO: Exercise 4.DONE
+        x=0;
+        for inst in dataset.instance_list:
+            gold_label = inst.label
+            pre_label = self.prediction(inst.feature_counts)
+            if(gold_label==pre_label):x+=1
+        total = self.cat_to_num_words.get(gold_label, 0)
+        return x/total
+
         # ODOT
         return 0
 
@@ -110,7 +128,10 @@ class NaiveBayesClassifier:
             = log[P(word|category)*P(category)] - log[P(word|other_category1)*P(other_category1)
               + P(word|other_category2)*P(other_category2) + ...]
         """
-        # TODO: Exercise 5.
+        # TODO: Exercise 5.DONE
+        other_cat=sum([self.category_to_prior[cat]*math.exp(self.log_probability(word,cat))\
+                       for cat in self.category_to_prior if cat!=category])
+        return self.log_probability(word,category) + math.log(self.category_to_prior[category]) - math.log(other_cat)
         # ODOT
         return 0
 
