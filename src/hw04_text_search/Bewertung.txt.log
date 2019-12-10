@@ -1,0 +1,83 @@
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+F
+======================================================================
+FAIL: test_check_division (hw04_text_search.test_comprehensions.TestComprehensions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw04_text_search\AnAn\src\hw04_text_search\test_comprehensions.py", line 21, in test_check_division
+    self.assertEqual(got, expected)
+AssertionError: Lists differ: [False, False, False, False, False, False, False,[58 chars]alse] != [False, True, False, False, False, False, False, [55 chars]alse]
+
+First differing element 1:
+False
+True
+
+  [False,
++  True,
+   False,
+   False,
+   False,
+   False,
+   False,
+   False,
+   False,
+   False,
++  True,
+   False,
+   False,
+   False,
++  True,
+-  False,
+-  False,
+-  False,
+   False]
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+E
+======================================================================
+ERROR: test_div_less (hw04_text_search.test_comprehensions.TestComprehensions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw04_text_search\AnAn\src\hw04_text_search\test_comprehensions.py", line 25, in test_div_less
+    got = div_less(set(self.numberList))
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw04_text_search\AnAn\src\hw04_text_search\comprehensions.py", line 32, in div_less
+    return {x for x in range(set1) if (x / x == 1 & x / 1 == x)}
+TypeError: 'set' object cannot be interpreted as an integer
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+F
+======================================================================
+FAIL: test_map_zip (hw04_text_search.test_comprehensions.TestComprehensions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw04_text_search\AnAn\src\hw04_text_search\test_comprehensions.py", line 35, in test_map_zip
+    self.assertEqual(got, expected)
+AssertionError: {('unique', 7), ('are', 5), ('words', 4), [88 chars] -2)} != {'All': -2, 'my': -3, 'words': 4, 'are': 5[70 chars]: 13}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_word_to_length (hw04_text_search.test_comprehensions.TestComprehensions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw04_text_search\AnAn\src\hw04_text_search\test_comprehensions.py", line 41, in test_word_to_length
+    self.assertDictEqual(got, expected)
+AssertionError: {<map object at 0x0000014C8A90F390>} is not an instance of <class 'dict'> : First argument is not a dictionary
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
