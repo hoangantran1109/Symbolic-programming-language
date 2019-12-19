@@ -13,12 +13,17 @@ class Reader:
 
     def get_lines(self):
         #TODO return list of courses from file
-        pass
+        with open(self.path, 'r') as f:
+            data = f.read()
+        return data
 
     def normalize_word(self,word):
         #TODO normalize word by lower casing and deleting punctuation from word
         #TODO use set of punctuation symbols self.punctuation
-        pass
+        s = word
+        for c in self.punctuation:
+            s = s.replace(c, "")
+        return print(s.lower())
 
     def get_vocabulary(self):
         #TODO return list of unique words from file and sort them alphabetically
@@ -50,6 +55,7 @@ class Kmeans:
 
     def vector_mean(self,vectors):
         #TODO calculate mean of the list of vectors
+        pass
 
     def train(self, inputs):
         # choose k random points as the initial means
