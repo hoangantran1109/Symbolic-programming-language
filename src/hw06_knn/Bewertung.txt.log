@@ -1,0 +1,78 @@
+E
+======================================================================
+ERROR: test_01_calc_sims (hw06_knn.test_knn.ClassificationTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw06_knn\AnAn\src\hw06_knn\test_knn.py", line 31, in test_01_calc_sims
+    sorted_dist = sorted(dist)
+TypeError: 'NoneType' object is not iterable
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+F
+======================================================================
+FAIL: test_02_order_near_to_far (hw06_knn.test_knn.ClassificationTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw06_knn\AnAn\src\hw06_knn\test_knn.py", line 36, in test_02_order_near_to_far
+    self.assertEqual([(0.7,"a"),(0.5,"b"),(0.2,"c")], classifier.order_nearest_to_farthest(test_distances))
+AssertionError: [(0.7, 'a'), (0.5, 'b'), (0.2, 'c')] != None
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+E
+======================================================================
+ERROR: test_03_labels_k_closest (hw06_knn.test_knn.ClassificationTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw06_knn\AnAn\src\hw06_knn\test_knn.py", line 40, in test_03_labels_k_closest
+    self.assertEqual(k_nearest_labels[0], 'alt.atheism')
+TypeError: 'NoneType' object is not subscriptable
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+F
+======================================================================
+FAIL: test_04_choose_neighbor (hw06_knn.test_knn.ClassificationTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw06_knn\AnAn\src\hw06_knn\test_knn.py", line 44, in test_04_choose_neighbor
+    self.assertEqual(winner, 'rec.sport.hockey')
+AssertionError: None != 'rec.sport.hockey'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_05_classify (hw06_knn.test_knn.ClassificationTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw06_knn\AnAn\src\hw06_knn\test_knn.py", line 50, in test_05_classify
+    self.assertEqual(classifier.classify(test_file), 'alt.atheism')
+AssertionError: None != 'alt.atheism'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_06_accuracy (hw06_knn.test_knn.ClassificationTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw06_knn\AnAn\src\hw06_knn\test_knn.py", line 61, in test_06_accuracy
+    self.assertEqual(accuracy, 75)
+AssertionError: None != 75
+
+----------------------------------------------------------------------
+Ran 1 test in 0.019s
+
+FAILED (failures=1)

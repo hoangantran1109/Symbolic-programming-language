@@ -1,0 +1,8 @@
+hw06_knn.test_knn.ClassificationTest.test_01_calc_sims                FAILED    0/1 points
+hw06_knn.test_knn.ClassificationTest.test_02_order_near_to_far        FAILED    0/1 points
+hw06_knn.test_knn.ClassificationTest.test_03_labels_k_closest         FAILED    0/1 points
+hw06_knn.test_knn.ClassificationTest.test_04_choose_neighbor          FAILED    0/1 points
+hw06_knn.test_knn.ClassificationTest.test_05_classify                 FAILED    0/1 points
+hw06_knn.test_knn.ClassificationTest.test_06_accuracy                 FAILED    0/1 points
+####################################
+TOTAL: 0/6 points
