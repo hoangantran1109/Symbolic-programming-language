@@ -32,7 +32,6 @@ class Analyzer(object):
 
     def getKeywords(self):
         '''return words as possible key words, that are longer than seven characters, that occur more than seven times (sorted alphabetically)'''
-        pos_tag=nltk.pos_tag(self.text)
         list= [w for w in set(self.text) if len(w) > 7 and self.token_counts[w] > 7]
         return sorted(list)
 
@@ -42,9 +41,9 @@ class Analyzer(object):
 
     def avWordLength(self):
         '''returns the average word length of the text'''
-        wordCount = len(self.text)
+        wordCount = len(self.token_counts)
         sum = 0
-        for word in self.text:
+        for word in self.token_counts:
             ch = len(word)
             sum = sum + ch
         avg = sum / wordCount
