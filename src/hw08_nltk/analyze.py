@@ -1,8 +1,11 @@
-
+import re
 
 import nltk
 from nltk import FreqDist
 from nltk import word_tokenize
+from nltk.tokenize import *
+from nltk.corpus import brown, stopwords
+
 
 class Analyzer(object):
     def __init__(self, path):
@@ -35,16 +38,27 @@ class Analyzer(object):
 
     def numberOfHapaxes(self):
         '''returns the number of hapaxes in the text'''
-        pass
+        return len(self.token_counts.hapaxes())
 
     def avWordLength(self):
         '''returns the average word length of the text'''
-        pass
+        wordCount = len(self.text)
+        sum = 0
+        for word in self.text:
+            ch = len(word)
+            sum = sum + ch
+        avg = sum / wordCount
+        return avg
+
 
     def topSuffixes(self):
         '''returns the 10 most frequent 2-letter suffixes in words
             (restrict to words of length 5 or more)'''
-        pass
+        # tokens = self.text
+        # stop_words = set(stopwords.words('english'))
+        # tokens = [t for t in tokens if t not in stop_words]
+        # fdist = nltk.FreqDist(tokens)
+        # return [suffix for suffix, freq in fdist.most_common(10)]
 
     def topPrefixes(self):
         '''returns the 10 most frequent 2-letter prefixes in words

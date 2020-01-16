@@ -26,7 +26,7 @@ class AnalyzerTest(TestCase):
         self.assertEqual(self.analyzer.getKeywords()[:3],['Analytical', 'Annabella', 'Lovelace'])
     
     def test_05_numberOfHapaxes(self):
-        self.assertEqual(self.analyzer.numberOfHapaxes(),936)
+        self.assertEqual(self.analyzer.numberOfHapaxes(),937)
     
     def test_06_avWordLength(self):
         self.assertEqual(int(self.analyzer.avWordLength()),6)
