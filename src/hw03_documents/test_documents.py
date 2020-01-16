@@ -9,7 +9,7 @@ class TextDocumentTest(TestCase):
         self.text = "Dr. Strangelove is the U.S. President's advisor."
 
     def testTokenizer(self):
-        tokens = normalized_tokens(self.text)
+        tokens = TextDocument(self.text)
         expected_tokens = ['dr.', 'strangelove', 'is', 'the', 'u.s.', 'president', \
                            "'s", 'advisor', '.']
         self.assertEqual(tokens, expected_tokens)

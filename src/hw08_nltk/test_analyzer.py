@@ -1,6 +1,8 @@
 from unittest import TestCase
 from hw08_nltk.analyze import Analyzer
 from nltk import FreqDist
+#python -m unittest -v hw08_nltk/test_analyzer.py
+
 
 class AnalyzerTest(TestCase):
     
@@ -12,10 +14,10 @@ class AnalyzerTest(TestCase):
         self.assertEqual(type(self.analyzer.token_counts) == FreqDist)
     
     def test_01_numberOfTokens(self):
-        self.assertEqual(self.analyzer.numberOfTokens(), 4506)
+        self.assertEqual(self.analyzer.numberOfTokens(), 4523)
     
     def test_02_size(self):
-        self.assertEqual(self.analyzer.vocabularySize(),1390)
+        self.assertEqual(self.analyzer.vocabularySize(),1393)
     
     def test_03_diversity(self):
         self.assertEqual(int(self.analyzer.lexicalDiversity()),3)
