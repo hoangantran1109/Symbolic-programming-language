@@ -53,11 +53,9 @@ class Analyzer(object):
     def topSuffixes(self):
         '''returns the 10 most frequent 2-letter suffixes in words
             (restrict to words of length 5 or more)'''
-        # tokens = self.text
-        # stop_words = set(stopwords.words('english'))
-        # tokens = [t for t in tokens if t not in stop_words]
-        # fdist = nltk.FreqDist(tokens)
-        # return [suffix for suffix, freq in fdist.most_common(10)]
+        list =[w for w in self.token_counts if len(self.token_counts) > 5 ]
+        a=list[-2:]
+        return a
 
     def topPrefixes(self):
         '''returns the 10 most frequent 2-letter prefixes in words
