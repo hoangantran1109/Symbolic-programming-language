@@ -53,10 +53,13 @@ class Analyzer(object):
     def topSuffixes(self):
         '''returns the 10 most frequent 2-letter suffixes in words
             (restrict to words of length 5 or more)'''
-        list =[w for w in self.token_counts if len(self.token_counts) > 5 ]
-        a=list[-2:]
-        return a
-
+        suffixList = {}
+        Suffix = ""
+        for line in self.text:
+            line = line[-2:]  # Here I am trying to find 2-letter suffixes
+            if line not in suffixList:
+                suffixList[Suffix] = [line]  # I want to add the suffix to the dic
+        return suffixList
     def topPrefixes(self):
         '''returns the 10 most frequent 2-letter prefixes in words
             (restrict to words of length 5 or more)'''
