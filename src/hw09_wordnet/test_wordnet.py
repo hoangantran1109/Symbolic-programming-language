@@ -19,10 +19,10 @@ class WordnetTest(TestCase):
                  ('monk', 'slave'), ('coast', 'forest'), ('lad', 'wizard'), ('chord', 'smile'), ('glass', 'magician'),
                  ('rooster', 'voyage'), ('noon', 'string')]
         results = get_similarity_scores(pairs)
-        simOfCar = [(pair, sim) for pair, sim in results if pair =='car-automobile'][0]
-        simOfVoyage = [(pair, sim) for pair, sim in results if pair =='journey-voyage'][0]
-        self.assertEqual(simOfCar,('car-automobile', 1.0))
-        self.assertEqual(simOfVoyage,('journey-voyage', 0.5))
+        simOfCar = [(pair, sim) for pair, sim in results if pair =='car-automobile']
+        simOfVoyage = [(pair, sim) for pair, sim in results if pair =='journey-voyage']
+        self.assertEqual(simOfCar,[('car-automobile', 1.0)])
+        self.assertEqual(simOfVoyage,[('journey-voyage', 0.5)])
 
     def test_2_odd_man(self):
 
