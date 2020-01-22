@@ -1,0 +1,13 @@
+hw08_nltk.test_analyzer.AnalyzerTest.test_01_numberOfTokens           FAILED    0/1 points
+hw08_nltk.test_analyzer.AnalyzerTest.test_02_size                     FAILED    0/1 points
+hw08_nltk.test_analyzer.AnalyzerTest.test_03_diversity                OK        1/1 points
+hw08_nltk.test_analyzer.AnalyzerTest.test_04_get_keywords             OK        1/1 points
+hw08_nltk.test_analyzer.AnalyzerTest.test_05_numberOfHapaxes          FAILED    0/1 points
+hw08_nltk.test_analyzer.AnalyzerTest.test_06_avWordLength             OK        1/1 points
+hw08_nltk.test_analyzer.AnalyzerTest.test_07_topSuffixes              FAILED    0/1 points
+hw08_nltk.test_analyzer.AnalyzerTest.test_08_topPrefixes              FAILED    0/1 points
+hw08_nltk.test_analyzer.AnalyzerTest.test_09_tokensTypical            FAILED    0/1 points
+hw08_nltk.test_lang_guesser.LangGuesserTest.test_01_unigram_word_models FAILED    0/2 points
+hw08_nltk.test_lang_guesser.LangGuesserTest.test_02_guess             FAILED    0/2 points
+####################################
+TOTAL: 3/13 points

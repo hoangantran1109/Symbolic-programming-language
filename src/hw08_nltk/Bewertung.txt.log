@@ -1,0 +1,139 @@
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\analyze.py:14: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/ada_lovelace.txt' mode='r' encoding='cp65001'>
+  self.text = nltk.word_tokenize(open(path).read()) #TODO the list of words from text file *DONE
+F
+======================================================================
+FAIL: test_01_numberOfTokens (hw08_nltk.test_analyzer.AnalyzerTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\test_analyzer.py", line 17, in test_01_numberOfTokens
+    self.assertEqual(self.analyzer.numberOfTokens(), 4523)
+AssertionError: 4506 != 4523
+
+----------------------------------------------------------------------
+Ran 1 test in 0.082s
+
+FAILED (failures=1)
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\analyze.py:14: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/ada_lovelace.txt' mode='r' encoding='cp65001'>
+  self.text = nltk.word_tokenize(open(path).read()) #TODO the list of words from text file *DONE
+F
+======================================================================
+FAIL: test_02_size (hw08_nltk.test_analyzer.AnalyzerTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\test_analyzer.py", line 20, in test_02_size
+    self.assertEqual(self.analyzer.vocabularySize(),1393)
+AssertionError: 1390 != 1393
+
+----------------------------------------------------------------------
+Ran 1 test in 0.088s
+
+FAILED (failures=1)
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\analyze.py:14: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/ada_lovelace.txt' mode='r' encoding='cp65001'>
+  self.text = nltk.word_tokenize(open(path).read()) #TODO the list of words from text file *DONE
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.070s
+
+OK
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\analyze.py:14: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/ada_lovelace.txt' mode='r' encoding='cp65001'>
+  self.text = nltk.word_tokenize(open(path).read()) #TODO the list of words from text file *DONE
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.062s
+
+OK
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\analyze.py:14: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/ada_lovelace.txt' mode='r' encoding='cp65001'>
+  self.text = nltk.word_tokenize(open(path).read()) #TODO the list of words from text file *DONE
+F
+======================================================================
+FAIL: test_05_numberOfHapaxes (hw08_nltk.test_analyzer.AnalyzerTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\test_analyzer.py", line 29, in test_05_numberOfHapaxes
+    self.assertEqual(self.analyzer.numberOfHapaxes(),937)
+AssertionError: 936 != 937
+
+----------------------------------------------------------------------
+Ran 1 test in 0.109s
+
+FAILED (failures=1)
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\analyze.py:14: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/ada_lovelace.txt' mode='r' encoding='cp65001'>
+  self.text = nltk.word_tokenize(open(path).read()) #TODO the list of words from text file *DONE
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.073s
+
+OK
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\analyze.py:14: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/ada_lovelace.txt' mode='r' encoding='cp65001'>
+  self.text = nltk.word_tokenize(open(path).read()) #TODO the list of words from text file *DONE
+F
+======================================================================
+FAIL: test_07_topSuffixes (hw08_nltk.test_analyzer.AnalyzerTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\test_analyzer.py", line 36, in test_07_topSuffixes
+    self.assertEqual(self.analyzer.topSuffixes(),topSuffixes)
+AssertionError: {'': ['.']} != ['ed', 'ng', 'er', 'ly', 'on', 'es', 'al', 'nt', 'ce', 'le']
+
+----------------------------------------------------------------------
+Ran 1 test in 0.049s
+
+FAILED (failures=1)
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\analyze.py:14: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/ada_lovelace.txt' mode='r' encoding='cp65001'>
+  self.text = nltk.word_tokenize(open(path).read()) #TODO the list of words from text file *DONE
+F
+======================================================================
+FAIL: test_08_topPrefixes (hw08_nltk.test_analyzer.AnalyzerTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\test_analyzer.py", line 40, in test_08_topPrefixes
+    self.assertEqual(self.analyzer.topPrefixes(),topPrefixes)
+AssertionError: None != ['co', 're', 'in', 'pr', 'de', 'ex', 'di', 'be', 'th', 'ma']
+
+----------------------------------------------------------------------
+Ran 1 test in 0.053s
+
+FAILED (failures=1)
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\analyze.py:14: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/ada_lovelace.txt' mode='r' encoding='cp65001'>
+  self.text = nltk.word_tokenize(open(path).read()) #TODO the list of words from text file *DONE
+F
+======================================================================
+FAIL: test_09_tokensTypical (hw08_nltk.test_analyzer.AnalyzerTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\test_analyzer.py", line 44, in test_09_tokensTypical
+    self.assertEqual(self.analyzer.tokensTypical(),typical)
+AssertionError: None != ['becoming', 'bed', 'beginner', 'beginning', 'being']
+
+----------------------------------------------------------------------
+Ran 1 test in 0.053s
+
+FAILED (failures=1)
+E
+======================================================================
+ERROR: test_01_unigram_word_models (hw08_nltk.test_lang_guesser.LangGuesserTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\test_lang_guesser.py", line 19, in test_01_unigram_word_models
+    some_word_counts_inEnglish = [language_model_cfd['English'][w] for w in ['universal','declaration','of']]
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\test_lang_guesser.py", line 19, in <listcomp>
+    some_word_counts_inEnglish = [language_model_cfd['English'][w] for w in ['universal','declaration','of']]
+TypeError: 'NoneType' object is not subscriptable
+
+----------------------------------------------------------------------
+Ran 1 test in 0.016s
+
+FAILED (errors=1)
+F
+======================================================================
+FAIL: test_02_guess (hw08_nltk.test_lang_guesser.LangGuesserTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw08_nltk\AnAn\src\hw08_nltk\test_lang_guesser.py", line 28, in test_02_guess
+    self.assertEqual(self.langModeler.guess_language(language_model_cfd, text1), 'English')
+AssertionError: None != 'English'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.018s
+
+FAILED (failures=1)
