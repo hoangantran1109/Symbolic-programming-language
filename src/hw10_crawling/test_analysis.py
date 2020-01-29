@@ -30,8 +30,8 @@ class AnalysisTest(TestCase):
 
     def test_05_filter_dict_homographs(self):
         filter_dict_homographs(self.tagsDict)
-        self.assertEqual(len(self.tagsDict),24)
-
+        #self.assertEqual(len(self.tagsDict),24)
+        self.assertEqual(len(filter_dict_homographs(self.tagsDict)), 24)
     def test_06_homographs(self):
         homographs = find_homographs(self.tokens_normalized)
         self.assertTrue("light" in homographs)
