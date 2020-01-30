@@ -1,0 +1,55 @@
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw09_wordnet\AnAn\src\hw09_wordnet\find_hyponyms.py:12: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/ada_lovelace.txt' mode='r' encoding='cp65001'>
+  text=open(text_path).read()
+.
+----------------------------------------------------------------------
+Ran 1 test in 5.726s
+
+OK
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw09_wordnet\AnAn\src\hw09_wordnet\find_hyponyms.py:12: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/ada_lovelace.txt' mode='r' encoding='cp65001'>
+  text=open(text_path).read()
+.
+----------------------------------------------------------------------
+Ran 1 test in 5.133s
+
+OK
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw09_wordnet\AnAn\src\hw09_wordnet\find_hyponyms.py:12: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/ada_lovelace.txt' mode='r' encoding='cp65001'>
+  text=open(text_path).read()
+F
+======================================================================
+FAIL: test_3_lemma_names (hw09_wordnet.test_wordnet.WordnetTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw09_wordnet\AnAn\src\hw09_wordnet\test_wordnet.py", line 34, in test_3_lemma_names
+    self.assertEqual(len(self.hyponymSearcher.noun_lemmas), 1268)
+AssertionError: 1262 != 1268
+
+----------------------------------------------------------------------
+Ran 1 test in 4.216s
+
+FAILED (failures=1)
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw09_wordnet\AnAn\src\hw09_wordnet\find_hyponyms.py:12: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/ada_lovelace.txt' mode='r' encoding='cp65001'>
+  text=open(text_path).read()
+.
+----------------------------------------------------------------------
+Ran 1 test in 3.792s
+
+OK
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw09_wordnet\AnAn\src\hw09_wordnet\find_hyponyms.py:12: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/ada_lovelace.txt' mode='r' encoding='cp65001'>
+  text=open(text_path).read()
+E
+======================================================================
+ERROR: test_05_hyponyms (hw09_wordnet.test_wordnet.WordnetTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw09_wordnet\AnAn\src\hw09_wordnet\test_wordnet.py", line 47, in test_05_hyponyms
+    hypos_relative = self.hyponymSearcher.get_hyponyms(relative)
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw09_wordnet\AnAn\src\hw09_wordnet\find_hyponyms.py", line 52, in get_hyponyms
+    hypo = wordnet.synsets(hypernym)[0].hyponyms()
+  File "C:\Users\Johannes\AppData\Local\Programs\Python\Python37\lib\site-packages\nltk\corpus\reader\wordnet.py", line 1575, in synsets
+    lemma = lemma.lower()
+AttributeError: 'Synset' object has no attribute 'lower'
+
+----------------------------------------------------------------------
+Ran 1 test in 4.314s
+
+FAILED (errors=1)
