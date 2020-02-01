@@ -1,0 +1,65 @@
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.800s
+
+OK
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.780s
+
+OK
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.740s
+
+OK
+.
+----------------------------------------------------------------------
+Ran 1 test in 1.070s
+
+OK
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.690s
+
+OK
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.810s
+
+OK
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw10_crawling\AnAn\src\hw10_crawling\relation_extractor.py:12: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/hydrogenics_report.txt' mode='r' encoding='utf8'>
+  file=open(path,encoding="utf8").read()
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.030s
+
+OK
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw10_crawling\AnAn\src\hw10_crawling\relation_extractor.py:12: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/hydrogenics_report.txt' mode='r' encoding='utf8'>
+  file=open(path,encoding="utf8").read()
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.030s
+
+OK
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw10_crawling\AnAn\src\hw10_crawling\relation_extractor.py:12: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/hydrogenics_report.txt' mode='r' encoding='utf8'>
+  file=open(path,encoding="utf8").read()
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.020s
+
+OK
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw10_crawling\AnAn\src\hw10_crawling\relation_extractor.py:12: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/hydrogenics_report.txt' mode='r' encoding='utf8'>
+  file=open(path,encoding="utf8").read()
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.030s
+
+OK
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw10_crawling\AnAn\src\hw10_crawling\relation_extractor.py:12: ResourceWarning: unclosed file <_io.TextIOWrapper name='../../../../../../data/hydrogenics_report.txt' mode='r' encoding='utf8'>
+  file=open(path,encoding="utf8").read()
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.370s
+
+OK
